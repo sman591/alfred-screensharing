@@ -18,3 +18,7 @@ $ sudo gem install dnssd
 ```
 
 Afterwards, [download](Screen%20Sharing.alfredworkflow?raw=true) and install the Alfred workflow.
+
+Requirements:
+* Apple Developer Tools installed
+* Ruby 1.9+ (system level)
