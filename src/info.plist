@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>pstadler/alfred-screensharing</string>
+	<string>sman591/alfred-screensharing</string>
 	<key>connections</key>
 	<dict>
 		<key>A57B8333-3625-4FFD-9C83-D2902C2416CE</key>
@@ -19,7 +19,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Patrick Stadler</string>
+	<string>Patrick Stadler, Stuart Olivera</string>
 	<key>description</key>
 	<string>Connect to a host with automatic network discovery</string>
 	<key>disabled</key>
@@ -104,6 +104,6 @@ Hosts with Screen Sharing enabled will automatically be discovered and listed wi
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>http://github.com/pstadler/alfred-screensharing</string>
+	<string>http://github.com/sman591/alfred-screensharing</string>
 </dict>
 </plist>
