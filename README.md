@@ -7,3 +7,7 @@ Hosts with Screen Sharing enabled will **be automatically discovered** and liste
 ![Screenshot of "Screen Sharing for Alfred"](screenshot.png)
 
 [Download](Screen%20Sharing.alfredworkflow?raw=true)
+
+Requirements:
+* Apple Developer Tools to be installed
+* Ruby 1.9+ (system level)
