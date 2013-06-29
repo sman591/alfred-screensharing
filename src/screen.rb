@@ -21,7 +21,9 @@ DNSSD.browse '_rfb._tcp' do |reply|
     name.gsub!("_rfb._tcp.", "")
     name.gsub!("\\032", " ")
     name.gsub!(/\.local\.$/, "")
-    servers[name] = reply.target.sub(/\.$/, "")
+    hostname = reply.target.sub(/\.$/, "")
+
+    servers[name] = hostname
   end
 end
 
@@ -56,15 +58,19 @@ else
   servers = servers.select { |name, hostname| name.downcase.include?(query.downcase) || hostname.downcase.include?(query.downcase) }
 end
 
+local_hostname = `hostname`
+
 servers.each do |name, hostname|
-  item = <<-EOF
-    <item arg="#{hostname}" uid="#{hostname}" valid="yes">
-      <title>#{name}</title>
-      <subtitle>Connect to #{hostname}</subtitle>
-      <icon>icon.png</icon>
-    </item>
-  EOF
-  puts item
+  unless hostname == local_hostname.gsub(/\s+/, "")
+    item = <<-EOF
+      <item arg="#{hostname}" uid="#{hostname}" valid="yes">
+        <title>#{name}</title>
+        <subtitle>Connect to #{hostname}</subtitle>
+        <icon>icon.png</icon>
+      </item>
+    EOF
+    puts item
+  end
 end
 
 if (servers.empty?)
