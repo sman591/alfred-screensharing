@@ -6,8 +6,19 @@ Hosts with Screen Sharing enabled will **be automatically discovered** and liste
 
 ![Screenshot of "Screen Sharing for Alfred"](screenshot.png)
 
-[Download](Screen%20Sharing.alfredworkflow?raw=true)
+## Installation
+
+First, install `dnssd` to the default OS X ruby gemset.
+
+```bash
+# If using rbenv, first run `rbenv global system`
+# If using RVM, first run `rvm use system`
+# Otherwise, just run:
+$ sudo gem install dnssd
+```
+
+Afterwards, [download](Screen%20Sharing.alfredworkflow?raw=true) and install the Alfred workflow.
 
 Requirements:
-* Apple Developer Tools to be installed
+* Apple Developer Tools installed
 * Ruby 1.9+ (system level)
